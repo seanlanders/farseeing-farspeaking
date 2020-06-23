@@ -13,10 +13,10 @@ mediaList["eyes"] = "./media/eyes.mov"
 
 
 def playClip(clip):
+	print("Playing " + clipName)
 	player.set_media(clip)
 	player.play()
 	time.sleep(0.2)
-
 
 vlcInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show","--fullscreen")
 player = vlcInstance.media_player_new()
@@ -39,4 +39,5 @@ while True:
     conn, addr = s.accept()
     data = conn.recv(4096)
     conn.close()
-    playClip((data.decode()+"Clip"))
+    clipName = data.decode() + "Clip"
+    playClip(clipName)
