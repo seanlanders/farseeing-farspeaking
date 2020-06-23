@@ -46,8 +46,8 @@ while True:
     clipName = data.decode() + "Clip"
     print(clipName)
     #playClip(clipName)
-	time.sleep(2)
-	player.set_media(attractClip)
-	time.sleep(1)
-	player.play()
-	time.sleep(0.2)
+    time.sleep(2)
+    player.set_media(attractClip)
+    time.sleep(1)
+    player.play()
+    time.sleep(0.2)
