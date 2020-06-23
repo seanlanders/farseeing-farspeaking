@@ -27,6 +27,9 @@ def answer():
         elif choice =='2':
             resp.redirect("/eyes")
             return str(resp)
+        elif choice == '3':
+            resp.redirect("/fantasy")
+            return str(resp)
         else:
             resp.say("Sorry, I didn't catch that.")
 
@@ -53,6 +56,9 @@ def gather():
             return str(resp)
         elif choice =='2':
             resp.redirect("/eyes")
+            return str(resp)
+        elif choice == '3':
+            resp.redirect('/fantasy')
             return str(resp)
         else:
             resp.redirect("/")
@@ -83,6 +89,20 @@ def eyes():
     print(resp)
     resp.redirect("/")
     return str(resp)
+
+@app.route("/fantasy", methods=['GET','POST'])
+def myshoulder():
+    resp = VoiceResponse()
+    resp.play('https://olive-wren-8959.twil.io/assets/CR-2006-04_512kb.mp3', loop=10)
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(("localhost", port))
+    message = ("fantasy").encode()
+    s.sendall(message)
+    s.close()
+    print(resp)
+    resp.redirect("/")
+    return str(resp)
+
 
 if __name__ == "__main__":
     app.run(port=5025, debug=True)

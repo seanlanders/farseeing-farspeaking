@@ -10,7 +10,7 @@ mediaList={}
 mediaList["media"] = "./media/media.mov"
 mediaList["shoulder"] = "./media/shoulder.mov"
 mediaList["eyes"] = "./media/eyes.mov"
-
+mediaList["fantasy"] = "https://ia802304.us.archive.org/1/items/CR_2006_04/CR-2006-04.ogv"
 
 mediaClip={}
 
@@ -20,10 +20,12 @@ player.set_fullscreen(True)
 attractClip = vlcInstance.media_new(mediaList["media"])
 shoulderClip = vlcInstance.media_new(mediaList["shoulder"])
 eyesClip = vlcInstance.media_new(mediaList["eyes"])
+fantasyClip = vlcInstance.media_new(mediaList["fantasy"])
 
 mediaClip["attract"] = attractClip
 mediaClip["shoulder"] = shoulderClip
 mediaClip["eyes"] = eyesClip
+mediaClip["fantasy"] = fantasyClip
 
 time.sleep(2)
 player.set_media(mediaClip["attract"])
