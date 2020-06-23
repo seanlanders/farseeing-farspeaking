@@ -37,7 +37,7 @@ s.bind(("localhost", 10001))
 s.listen(1)
 
 while True:
-	print("Waiting for data")
+    print("Waiting for data")
     conn, addr = s.accept()
     data = conn.recv(4096)
     print("data recieved")
