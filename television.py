@@ -39,5 +39,6 @@ while True:
     conn, addr = s.accept()
     data = conn.recv(4096)
     conn.close()
+    print(data.decode())
     clipName = data.decode() + "Clip"
     playClip(clipName)
