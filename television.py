@@ -6,9 +6,10 @@ def handledata(data):
 	data = data.decode() 
 	return data
 
-mediaList["media"] = "./media.mov"
-mediaList["shoulder"] = "./shoulder.mov"
-mediaList["eyes"] = "./eyes.mov"
+mediaList={}
+mediaList["media"] = "./media/media.mov"
+mediaList["shoulder"] = "./media/shoulder.mov"
+mediaList["eyes"] = "./media/eyes.mov"
 
 
 def playClip(clip):
