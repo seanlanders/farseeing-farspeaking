@@ -42,4 +42,5 @@ while True:
     conn.close()
     print(data.decode())
     clipName = data.decode() + "Clip"
+    print(clipName)
     playClip(clipName)
