@@ -37,10 +37,17 @@ s.bind(("localhost", 10001))
 s.listen(1)
 
 while True:
+	print("Waiting for data")
     conn, addr = s.accept()
     data = conn.recv(4096)
+    print("data recieved")
     conn.close()
     print(data.decode())
     clipName = data.decode() + "Clip"
     print(clipName)
-    playClip(clipName)
+    #playClip(clipName)
+	time.sleep(2)
+	player.set_media(attractClip)
+	time.sleep(1)
+	player.play()
+	time.sleep(0.2)
