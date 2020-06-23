@@ -15,7 +15,7 @@ def answer():
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("localhost", port))
-    message = ("media").encode()
+    message = ("attract").encode()
     s.sendall(message)
     s.close()
 
