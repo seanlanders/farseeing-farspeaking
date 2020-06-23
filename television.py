@@ -18,15 +18,12 @@ def playClip(clip):
 	time.sleep(0.2)
 
 
-attractMedia = "./media.mov"
-shoulderMedia = "./shoulder.mov"
-eyesMedia = "./eyes.mov"
 vlcInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show","--fullscreen")
 player = vlcInstance.media_player_new()
 player.set_fullscreen(True)
-attractClip = vlcInstance.media_new(attractMedia)
-shoulderClip = vlcInstance.media_new(shoulderMedia)
-eyesClip = vlcInstance.media_new(eyesMedia)
+attractClip = vlcInstance.media_new(mediaList["media"])
+shoulderClip = vlcInstance.media_new(mediaList["shoulder"])
+eyesClip = vlcInstance.media_new(mediaList["eyes"])
 
 time.sleep(2)
 player.set_media(attractClip)
