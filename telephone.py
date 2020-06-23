@@ -91,7 +91,7 @@ def eyes():
     return str(resp)
 
 @app.route("/fantasy", methods=['GET','POST'])
-def myshoulder():
+def fantasy():
     resp = VoiceResponse()
     resp.play('https://olive-wren-8959.twil.io/assets/CR-2006-04_512kb.mp3', loop=10)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
