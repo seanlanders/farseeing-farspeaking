@@ -13,7 +13,7 @@ mediaList["eyes"] = "./media/eyes.mov"
 
 
 def playClip(clip):
-	print("Playing " + clipName)
+	print("Playing " + clip)
 	player.set_media(clip)
 	time.sleep(1)
 	player.play()
