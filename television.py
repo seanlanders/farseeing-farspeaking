@@ -10,7 +10,7 @@ mediaList={}
 mediaList["media"] = "./media/media.mov"
 mediaList["shoulder"] = "./media/shoulder.mov"
 mediaList["eyes"] = "./media/eyes.mov"
-mediaList["fantasy"] = "https://ia802304.us.archive.org/1/items/CR_2006_04/CR-2006-04.ogv"
+mediaList["fantasy"] = "https://olive-wren-8959.twil.io/assets/CR-2006-04_512kb.mp4"
 
 mediaClip={}
 
