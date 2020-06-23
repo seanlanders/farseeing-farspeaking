@@ -3,7 +3,7 @@ import time
 import socket
 
 def handledata(data):
-	data = data.decode() 
+	data = data.decode()
 	return data
 
 mediaList={}
@@ -32,7 +32,7 @@ player.play()
 time.sleep(0.2)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(("localhost", 9988))
+s.bind(("localhost", 10001))
 s.listen(1)
 
 while True:

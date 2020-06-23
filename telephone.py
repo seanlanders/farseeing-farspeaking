@@ -4,6 +4,7 @@ import socket
 import time
 
 app = Flask(__name__)
+port = 10001
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -13,7 +14,7 @@ def answer():
     resp = VoiceResponse()
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect(("localhost", 9988))
+    s.connect(("localhost", port))
     message = ("media").encode()
     s.sendall(message)
     s.close()
@@ -62,7 +63,7 @@ def myshoulder():
     resp = VoiceResponse()
     resp.play('https://olive-wren-8959.twil.io/assets/donttalk.mp3', loop=10)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect(("localhost", 9988))
+    s.connect(("localhost", port))
     message = ("shoulder").encode()
     s.sendall(message)
     s.close()
@@ -75,7 +76,7 @@ def eyes():
     resp = VoiceResponse()
     resp.play('https://olive-wren-8959.twil.io/assets/onlyhaveeyes.mp3', loop=10)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect(("localhost", 9988))
+    s.connect(("localhost", port))
     message = ("eyes").encode()
     s.sendall(message)
     s.close()
