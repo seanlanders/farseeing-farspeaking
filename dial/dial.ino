@@ -36,12 +36,13 @@ void loop()
       Serial.print(count % 10, DEC);
 
 // make the LED blink a number of times per number of pulses
-      for (int i = 0; i <= count; i++) {
-        digitalWrite(ledBlink, HIGH);
-        delay(50);
-        digitalWrite(ledBlink,LOW);
-        delay(50);
-      }
+// move this function to the rpi
+//      for (int i = 0; i <= count; i++) {
+//        digitalWrite(ledBlink, HIGH);
+//        delay(50);
+//        digitalWrite(ledBlink,LOW);
+//        delay(50);
+//      }
 
 //reset the count
     needToPrint = 0;
