@@ -12,4 +12,4 @@ if __name__ == '__main__':
 	while True:
 		if ser.in_waiting > 0 :
 			rotaryOutput = getNumber(ser)
-			print rotaryOutput
+			print(rotaryOutput)
