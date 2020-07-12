@@ -27,23 +27,32 @@ void setup()
 void loop()
 {
   int reading = digitalRead(in);
-
+//
+// ***ADD FUNCTION HERE - 
+// ***watch for phone "off the hook" before counting
+//
   if ((millis() - lastStateChangeTime) > dialHasFinishedRotatingAfterMs) {
 // the dial isn't being dialed, or has just finished being dialed.
     if (needToPrint) {
+//
+// ***ADD FUNCTION HERE -
+// ***is the phonecall happening within a given time limit of the phone being "off the hook"
+// 
 // if it's only just finished being dialed, we need to send the number down the serial
 // line and reset the count. We mod the count by 10 because '0' will send 10 pulses.
+//
       Serial.print(count % 10, DEC);
-
+//
+// ***move this function to the rpi
 // make the LED blink a number of times per number of pulses
-// move this function to the rpi
+// 
 //      for (int i = 0; i <= count; i++) {
 //        digitalWrite(ledBlink, HIGH);
 //        delay(50);
 //        digitalWrite(ledBlink,LOW);
 //        delay(50);
 //      }
-
+//
 //reset the count
     needToPrint = 0;
     count = 0;
