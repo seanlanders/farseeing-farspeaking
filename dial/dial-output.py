@@ -11,4 +11,5 @@ if __name__ == '__main__':
 
 	while True:
 		if ser.in_waiting > 0 :
-			getNumber(ser)
+			rotaryOutput = getNumber(ser)
+			print rotaryOutput
