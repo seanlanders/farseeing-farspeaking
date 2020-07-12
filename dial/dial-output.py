@@ -5,7 +5,7 @@ import sys
 time_start = time.time()
 seconds = 0
 minutes = 0
-phoneNumber = 0
+phoneNumber = ""
 
 def getNumber(ser):
 	line = ser.readline().decode('utf-8').rstrip()
@@ -20,7 +20,7 @@ if __name__ == '__main__':
 		if ser.in_waiting > 0 :
 			rotaryOutput = getNumber(ser)
 			print(rotaryOutput)
-			phoneNumber = phoneNumber + num(rotaryOutput)
+			phoneNumber = phoneNumber + rotaryOutput
 		if len(phoneNumber) == 7:
 			print(phoneNumber)
-			phoneNumber = 0
+			phoneNumber = ""
