@@ -7,7 +7,6 @@ seconds = 0
 minutes = 0
 phoneNumber = 0
 
-
 def getNumber(ser):
 	line = ser.readline().decode('utf-8').rstrip()
 	number = line
@@ -23,4 +22,5 @@ if __name__ == '__main__':
 			print(rotaryOutput)
 			phoneNumber = phoneNumber + num(rotaryOutput)
 		if len(phoneNumber) == 7:
-			print(phoneNumber) 
+			print(phoneNumber)
+			phoneNumber = 0
