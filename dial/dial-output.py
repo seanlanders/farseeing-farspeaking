@@ -21,7 +21,7 @@ mediaList["eyes"] = "./media/eyes.mov"
 mediaList["fantasy"] = "https://olive-wren-8959.twil.io/assets/CR-2006-04_512kb.mp4"
 mediaList["aeolian"] = "./media/Etude-Op25n1.flac"
 mediaList["donttalk"] = "./media/donttalk.mp3"
-mediaList[""]
+mediaList["onlyhaveeyes"] = "./media/onlyhaveeyes.mp3"
 
 
 mediaClip={}
@@ -29,18 +29,28 @@ mediaClip={}
 vlcInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show","--fullscreen")
 player = vlcInstance.media_player_new()
 player.set_fullscreen(True)
+audioPlayer = vlcInstance.media_player_new()
+audioPlayer.set_fullscreen(True)
 attractClip = vlcInstance.media_new(mediaList["media"])
 shoulderClip = vlcInstance.media_new(mediaList["shoulder"])
 eyesClip = vlcInstance.media_new(mediaList["eyes"])
 fantasyClip = vlcInstance.media_new(mediaList["fantasy"])
+aeolianClip = vlcInstance.media_new(mediaList["aeolian"])
+donttalkClip = vlcInstance.media_new(mediaList["donttalk"])
+onlyhaveeyesClip = vlcInstance.media_new(mediaList["onlyhaveeyes"])
+
 
 mediaClip["00"] = attractClip
 mediaClip["01"] = shoulderClip
 mediaClip["02"] = eyesClip
 mediaClip["03"] = fantasyClip
+audioClip["00"] = aeolianClip
+audioClip["01"] = donttalkClip
+audioClip["02"] = onlyhaveeyesClip
 
 time.sleep(2)
 player.set_media(mediaClip["00"])
+audioPlayer.set_media(mediaClip["00"])
 time.sleep(1)
 player.play()
 time.sleep(0.2)
@@ -54,6 +64,7 @@ def getNumber(ser):
 def playClip(number):
 	print("Playing " + number)
 	player.set_media(mediaClip[number])
+	audioPlayer.set_media(audioClip[number])
 	time.sleep(1)
 	player.play()
 	time.sleep(0.2)
