@@ -25,6 +25,7 @@ mediaList["onlyhaveeyes"] = "./media/onlyhaveeyes.mp3"
 
 
 mediaClip={}
+audioClip={}
 
 vlcInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show","--fullscreen")
 player = vlcInstance.media_player_new()
