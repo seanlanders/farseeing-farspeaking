@@ -54,6 +54,7 @@ player.set_media(mediaClip["00"])
 audioPlayer.set_media(mediaClip["00"])
 time.sleep(1)
 player.play()
+audioPlayer.play()
 time.sleep(0.2)
 
 
