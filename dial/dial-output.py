@@ -77,10 +77,10 @@ def getNumber(ser):
 
 def playClip(number):
 	print("Playing " + number)
-	player.set_media(mediaClip[number])
-	#audioPlayer.set_media(audioClip[number])
 	pygame.mixer.music.load(audioIndex[number])
 	pygame.mixer.music.play()
+	player.set_media(mediaClip[number])
+	#audioPlayer.set_media(audioClip[number])
 	time.sleep(1)
 	player.play()
 	time.sleep(0.2)
