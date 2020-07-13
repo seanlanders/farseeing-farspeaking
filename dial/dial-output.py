@@ -65,5 +65,8 @@ if __name__ == '__main__':
 			numberDialed = numberDialed + rotaryOutput
 		if len(numberDialed) == dialThreshold:
 			print(numberDialed)
-			playClip(numberDialed)
+			try:
+				playClip(numberDialed)
+			except:
+				playClip("00")
 			numberDialed = ""
