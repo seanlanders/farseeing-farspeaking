@@ -19,6 +19,10 @@ mediaList["media"] = "./media/media.mov"
 mediaList["shoulder"] = "./media/shoulder.mov"
 mediaList["eyes"] = "./media/eyes.mov"
 mediaList["fantasy"] = "https://olive-wren-8959.twil.io/assets/CR-2006-04_512kb.mp4"
+mediaList["aeolian"] = "./media/Etude-Op25n1.flac"
+mediaList["donttalk"] = "./media/donttalk.mp3"
+mediaList[""]
+
 
 mediaClip={}
 
