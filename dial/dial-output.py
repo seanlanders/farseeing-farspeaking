@@ -61,7 +61,7 @@ audioClip["02"] = onlyhaveeyesClip
 """
 
 time.sleep(2)
-pygame.mixer.music.play()
+pygame.mixer.music.play(loops=-1, fade_ms=1000)
 player.set_media(mediaClip["00"])
 #audioPlayer.set_media(mediaClip["00"])
 time.sleep(1)
@@ -78,7 +78,7 @@ def getNumber(ser):
 def playClip(number):
 	print("Playing " + number)
 	pygame.mixer.music.load(audioIndex[number])
-	pygame.mixer.music.play()
+	pygame.mixer.music.play(loops=-1, fade_ms=1000)
 	player.set_media(mediaClip[number])
 	#audioPlayer.set_media(audioClip[number])
 	time.sleep(1)
