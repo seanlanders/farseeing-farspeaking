@@ -83,7 +83,6 @@ def playClip(number):
 	pygame.mixer.music.play()
 	time.sleep(1)
 	player.play()
-	pygame.mixer.music.play()
 	time.sleep(0.2)
 
 if __name__ == '__main__':
