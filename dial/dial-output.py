@@ -33,7 +33,7 @@ audioIndex["01"] = mediaList["donttalk"]
 audioIndex["02"] = mediaList["onlyhaveeyes"]
 
 
-playerInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show")
+playerInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show","--fullscreen")
 #audioInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show")
 player = playerInstance.media_player_new()
 player.set_fullscreen(True)
