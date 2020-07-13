@@ -54,9 +54,11 @@ mediaClip["00"] = attractClip
 mediaClip["01"] = shoulderClip
 mediaClip["02"] = eyesClip
 mediaClip["03"] = fantasyClip
+"""
 audioClip["00"] = aeolianClip
 audioClip["01"] = donttalkClip
 audioClip["02"] = onlyhaveeyesClip
+"""
 
 time.sleep(2)
 pygame.mixer.play()
