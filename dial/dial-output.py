@@ -27,11 +27,10 @@ mediaList["onlyhaveeyes"] = "./media/onlyhaveeyes.mp3"
 mediaClip={}
 audioClip={}
 
-vlcInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show","--fullscreen")
+vlcInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show")
 player = vlcInstance.media_player_new()
 player.set_fullscreen(True)
 audioPlayer = vlcInstance.media_player_new()
-audioPlayer.set_fullscreen(True)
 attractClip = vlcInstance.media_new(mediaList["media"])
 shoulderClip = vlcInstance.media_new(mediaList["shoulder"])
 eyesClip = vlcInstance.media_new(mediaList["eyes"])
