@@ -34,21 +34,21 @@ audioIndex["02"] = mediaList["onlyhaveeyes"]
 
 
 playerInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show")
-audioInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show")
+#audioInstance = vlc.Instance("--input-repeat=65545","--no-video-title-show")
 player = playerInstance.media_player_new()
 player.set_fullscreen(True)
-audioPlayer = audioInstance.media_player_new()
+#audioPlayer = audioInstance.media_player_new()
 attractClip = playerInstance.media_new(mediaList["media"])
 shoulderClip = playerInstance.media_new(mediaList["shoulder"])
 eyesClip = playerInstance.media_new(mediaList["eyes"])
 fantasyClip = playerInstance.media_new(mediaList["fantasy"])
-aeolianClip = audioInstance.media_new(mediaList["aeolian"])
-donttalkClip = audioInstance.media_new(mediaList["donttalk"])
-onlyhaveeyesClip = audioInstance.media_new(mediaList["onlyhaveeyes"])
+#aeolianClip = audioInstance.media_new(mediaList["aeolian"])
+#donttalkClip = audioInstance.media_new(mediaList["donttalk"])
+#onlyhaveeyesClip = audioInstance.media_new(mediaList["onlyhaveeyes"])
 
 
-#pygame.mixer.init()
-#pygame.mixer.music.load(audioIndex["00"])
+pygame.mixer.init()
+pygame.mixer.music.load(audioIndex["00"])
 
 mediaClip["00"] = attractClip
 mediaClip["01"] = shoulderClip
@@ -59,9 +59,9 @@ audioClip["01"] = donttalkClip
 audioClip["02"] = onlyhaveeyesClip
 
 time.sleep(2)
-#pygame.mixer.play()
+pygame.mixer.play()
 player.set_media(mediaClip["00"])
-audioPlayer.set_media(mediaClip["00"])
+#audioPlayer.set_media(mediaClip["00"])
 time.sleep(1)
 player.play()
 audioPlayer.play()
@@ -76,8 +76,8 @@ def getNumber(ser):
 def playClip(number):
 	print("Playing " + number)
 	player.set_media(mediaClip[number])
-	audioPlayer.set_media(audioClip[number])
-	#pygame.mixer.music.load(audioIndex[number])
+	#audioPlayer.set_media(audioClip[number])
+	pygame.mixer.music.load(audioIndex[number])
 	time.sleep(1)
 	player.play()
 	pygame.mixer.music.play()
